@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Growing Guide | Contact Us</title>
+    <meta name="description" content="Get in touch with us for more plant care questions.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🌿 <span>PlantGuide</span></div>
+            <button class="nav-toggle" id="nav-toggle">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plants.html">Plants</a></li>
+                <li><a href="favorite.html">Favorite</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <div class="form-container">
+            <h2>Contact Us</h2>
+            <div id="contact-feedback" class="feedback-msg"></div>
+            <form id="contact-form" novalidate>
+                <div class="form-group" id="group-name">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                    <div class="error-msg">Full name is required.</div>
+                </div>
+                <div class="form-group" id="group-email">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <div class="error-msg">Please enter a valid email address.</div>
+                </div>
+                <div class="form-group" id="group-message">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="5" placeholder="How can we help you plant your next seed?"></textarea>
+                    <div class="error-msg">Message must be at least 10 characters long.</div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PlantGuide. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

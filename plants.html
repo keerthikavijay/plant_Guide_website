@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Growing Guide | All Plants</title>
+    <meta name="description" content="Explore 30+ comprehensive plant care guides with watering schedules, soil types, and step-by-step instructions.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🌿 <span>PlantGuide</span></div>
+            <button class="nav-toggle" id="nav-toggle">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plants.html" class="active">Plants</a></li>
+                <li><a href="favorite.html">Favorite</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <h1 class="text-center" style="color: var(--primary-color); margin-bottom: 1rem;">Explore All Plants</h1>
+        <p class="text-center" style="color: var(--text-light);">Click on any plant to view its full care guide or add it to your favorites.</p>
+        
+        <div class="plants-grid" id="plants-container">
+            <!-- Plant cards will be injected here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Full Plant Detail Modal -->
+    <div class="modal-overlay" id="plant-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-hero">
+                <img id="modal-image" src="" alt="Plant image">
+            </div>
+            <div class="modal-body">
+                <h2 class="modal-title">
+                    <span id="modal-title-text">Plant Name</span>
+                    <button class="fav-btn" id="modal-fav-btn" title="Add to Favorites">❤</button>
+                </h2>
+                <p id="modal-desc" style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-light);"></p>
+                
+                <div class="care-grid">
+                    <div class="care-item">
+                        <h4>💧 Watering</h4>
+                        <p id="modal-water"></p>
+                    </div>
+                    <div class="care-item">
+                        <h4>☀️ Sunlight</h4>
+                        <p id="modal-sun"></p>
+                    </div>
+                    <div class="care-item">
+                        <h4>🌱 Soil</h4>
+                        <p id="modal-soil"></p>
+                    </div>
+                    <div class="care-item">
+                        <h4>🏺 Fertilizer</h4>
+                        <p id="modal-fert"></p>
+                    </div>
+                    <div class="care-item">
+                        <h4>⚠️ Common Problems</h4>
+                        <p id="modal-probs"></p>
+                    </div>
+                </div>
+
+                <div class="steps-section">
+                    <h3>Step-by-Step Growing Process</h3>
+                    <ul class="steps-list" id="modal-steps">
+                        <!-- Steps injected by JS -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PlantGuide. All rights reserved.</p>
+    </footer>
+
+    <!-- Load data first, then script -->
+    <script src="js/plants_data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
